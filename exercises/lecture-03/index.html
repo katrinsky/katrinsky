@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 3 challenges</title>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <!-- Завдання 5. Підключення css/main.css за допомогою тега link -->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!-- Підключення css/common.css за допомогою правила @import -->
+    <style>
+        @import url('css/common.css');
+    </style>
+
+    <style>
+        p {
+            color: red;
+            }
+        <!-- Завдання 4 (бо його сюди треба було додати, решта завдань нижче) -->
+        body {
+            background: var(--bgColor);
+            }
+
+        div {
+        --bgColor: limegreen;
+            }
+        p { 
+            background: var(--bgColor);
+            }
+<!-- Змінна --bgColor оголошується в елементі div, і тому вона буде доступною лише в межах цього div. У другій частині цього завдання ми додали в div два параграфи. Саме вони будуть мати фон limegreen. -->
+      </style>
+</head>
+<body>
+
+    <!-- Завдання 1-->
+    <h2>Сторінка Вікіпедії для мови CSS</h2>
+    <iframe title="Сторінка Вікіпедії для мови CSS" src="https://uk.wikipedia.org/wiki/CSS"></iframe>
+
+    <!-- Завдання 2-->
+    <p style="color: blue;">This is my paragraph.</p>
+    <!-- Колір тексту буде синій (blue), оскільки атрибут style у тегу p визначає кольор для цього конкретного тегу. -->
+
+    <!-- Завдання 3-->
+    <p>Звичайний, нудний абзац. Намагайтеся не заснути.</p>
+    <p class="exciting">The most exciting paragraph on the page. One of a kind!</p>
+    <div class="exciting">The most exciting paragraph on the page. One of a kind!</div>
+    <style>
+        .exciting {
+         background: #f69d3c;
+         border: 1px solid #696969;
+         padding: 10px;
+        }
+       </style>
+
+    <!-- Ідентифікатори повинні бути унікальними на сторінці. Тому замінюємо id на class -->
+
+    <!-- Завдання 4 -->
+    <div>
+        <h3>Div 1</h3>
+            <p>Paragraph 1</p>
+        </div>
+    
+        <div>
+        <h3>Div 2</h3>
+            <p>Paragraph 2</p>
+        </div>
+    
+</body>
+</html>
