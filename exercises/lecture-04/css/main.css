@@ -33,6 +33,11 @@ section > p {
   p.first a {
     color: green;
 }
+
+body > h2:first-of-type {
+    color: indigo;
+}
+
 p.first span.first a {
     color: green;
 }
