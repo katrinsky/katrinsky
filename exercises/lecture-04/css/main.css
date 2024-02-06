@@ -42,7 +42,7 @@ div + p, div ~ p {
 }
 
 .translucent-box {
-    background: hsla(0, 100%, 50%, 0.8);
+    background: hsla(0, 100%, 50%, 0.5);
     /* Hue = 0deg, Saturate = 100%, Lightness = 50%, Alpha = 0.5 (напівпрозорий) */
     width: 180px;
     height: 180px;
