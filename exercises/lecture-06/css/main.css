@@ -1,0 +1,68 @@
+a {
+    color: indigo; /* колір за замовчуванням */
+}
+
+a:visited {
+    color: gold; /* посилання відвідали */
+}
+
+a:hover {
+    color: salmon; /* вказівник користувача знаходиться над ним */
+}
+
+a:active {
+    color: red; /* активований */
+}
+
+a:focus {
+    color: orange; /* отримав фокус */
+}
+
+input[type=number]:valid {
+    background-color: rgba(0, 255, 0, 0.25);
+}
+input[type=number]:invalid {
+    background-color: rgba(255, 0, 0, 0.25);
+}
+
+.first-ul li:first-child {
+    color: orange;
+}
+
+.second-ul li:first-child,
+.second-ul :first-of-type {
+    color: orange;
+}
+
+.third-ul li:last-child,
+.third-ul :last-of-type {
+    color: orange;
+}
+
+.fourth-ul li:not(.first-item) { color: orange; }
+.fourth-ul li:not(.first-item):not(:last-of-type) {
+    background: yellow;
+    color: black;
+    }
+    
+ol :nth-child(2) { 
+     color: orange; 
+    }
+ol :nth-child(2n) {
+     color: orange;
+    }
+ol :nth-child(2n+6) { 
+    color: orange;
+    }
+
+h1.ua::before {
+    content: "Слава ";
+    }
+h1.hero::after {
+    content: " Слава!";
+    }
+
+p::before {
+    content: "\0A7";
+    padding-right: 0.2em;
+    }
