@@ -34,10 +34,9 @@ p.first span.first a {
     color: green;
 }
 
-div p {
+div ~ p {
     color: salmon;
-}
-
+  }
 
 .translucent-box {
     background: hsla(0, 100%, 50%, 0.5);
