@@ -18,10 +18,10 @@ a:focus {
     color: orange; /* отримав фокус */
 }
 
-input[type=number]:valid {
+input:in-range {
     background-color: rgba(0, 255, 0, 0.25);
 }
-input[type=number]:invalid {
+input:out-of-range {
     background-color: rgba(255, 0, 0, 0.25);
 }
 
