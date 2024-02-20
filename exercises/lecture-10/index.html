@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <style>
+        .wrapper {
+            display: flex;
+            flex-wrap: wrap;  
+            width: 700px;
+            /* розподілити простір між елементами flex так, щоб вони мали однакову ширину та заповнювали 
+            весь доступний простір. Закоментуйте цей рядок. 
+            justify-content: space-between; */ 
+        }
+        .item-blue {
+            background-color: blue; 
+            /*Встановіть для елемента blue фактор зростання 3*/
+            flex-grow: 3;
+        }
+        .item-orange {
+            background-color:orange;  
+        }
+        .item-green {
+            background-color:green;
+            /*Встановіть для елемента green фактор зростання 1*/
+            flex-grow: 1;
+        }
+        .item {
+            color: white;
+            width: 100px;
+        }
+
+        /*Розрахуйте в пікселях ширину кожного з елементів item-green, item-orange, item-blue
+        Для розрахунку кожного елементу використовуємо формулу: 
+        (flex-grow елементу/загальна flex-grow * вільний простір) + початкова ширина item
+        Загальна flex-grow = 4
+        flex-grow item-green = 1
+        flex-grow item-blue = 3
+        flex-grow item-orange = 0
+        Початкова ширина всіх елементів = 100px + 100px + 100px = 300px
+        Вільний простір = 700px-300px = 400px
+        Отже:
+        Ширина елемента item-green = 1/4*400 + 100px  = 200px;
+        Ширина елемента item-orange = 0/4*400 + 100px = 100px;
+        Ширина елемента item-blue = 3/4*400 + 100px = 400px. */
+
+    </style>
+
+</head>
+<body>
+    <h2>CSS Flex Property</h2>
+    <div class="wrapper">
+        <div class="item item-blue">CSS</div>
+        <div class="item item-orange">Flex</div>
+        <div class="item item-green">Property</div>
+    </div>
+</body>
+</html>
