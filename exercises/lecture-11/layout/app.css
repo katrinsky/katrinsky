@@ -1,0 +1,33 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+    "header header header"
+    "sidebar main main "
+    "footer footer footer";
+    grid-gap: 20px;
+}
+
+.header {
+  grid-area: header;
+  background: rgb(5, 223, 187);
+
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background: rgb(253, 168, 64);
+
+}
+
+.main {
+  grid-area: main;
+  background: rgb(245, 133, 250);
+
+}
+
+.footer {
+  grid-area: footer;
+  background: rgb(75, 106, 234);
+
+}
