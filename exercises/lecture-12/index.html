@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Dynamic font-size</title>
+  <style>
+  * {
+    margin: 0;
+  }
+
+  body {
+    color: #000;
+    background: #fff;
+    font-family: Arial, sans-serif;
+    padding: 1em;
+  }
+    /*Для екранів, менших за 768 пікселів, розмір шрифту не має бути меншим за 16 пікселів*/
+    @media screen and (max-width: 767px) {
+        body {
+            font-size: 16px; /*якщо потрібно встановити шрифт = 16px */
+            /*font-size: clamp(16px, 4vw, 20px); якщо шрифт має бути не меншим 16px, але може бути більшим (за умовами до 20px)*/
+          }
+        }
+    /*Якщо ширина вікна перегляду становить 768 пікселів, розмір шрифту має дорівнювати 20 пікселям.
+    Якщо ширина вікна перегляду перевищує 768 пікселів, розмір шрифту масштабується пропорційно.
+    При 1920 пікселях розмір шрифту має дорівнювати 36 пікселям.*/
+    @media screen and (min-width: 768px) and (max-width: 1920px) {
+        body {
+            font-size: clamp(20px, calc(20px + (36 - 20) * ((100vw - 768px)/(1920 - 768))), 36px);
+          }
+        }
+    /*Для екранів, розмір яких перевищує 1920 пікселів, розмір шрифту не має перевищувати 48 пікселів*/
+    @media screen and (min-width: 1921px) {
+        body {
+           font-size: 48px; /* якщо потрібно встановити шрифт = 48px */
+          /*font-size: clamp(36px, 2vw, 48px); якщо шрифт не має бути більше 48px, але може бути меншим (за умовами до 36px) */
+          }
+        }
+
+  </style>
+</head>
+
+<body translate="no">
+<p>
+  This text has a font size of 20px at viewport width of 768px and font size of 36px when viewport width is 1920px. But if the viewport width is less than 768px, the font-size won't get lower than 16px and if the viewport width is more than 1920px font size will stop scaling at 48px.
+</p>
+
+</body>
+</html>
