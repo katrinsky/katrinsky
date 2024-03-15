@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	
+</head>
+<body>
+
+  - функція checkAge повертає true, якщо параметр age перевищує 18.
+  - в іншому випадку запитує підтвердження та повертає результат:
+
+    <!-- Завдання 1.1. Перепишіть функцію checkAge, видаливши else. -->
+    
+    <script>
+    function checkAge(age) {
+      if (age > 18) {
+        return true;
+      } 
+        return confirm('Did parents allow you?');
+    }
+    </script>
+
+    <!-- Завдання 1.2. Чи буде функція працювати інакше, якщо видалити else?
+    Ні, функція працюватиме так само.
+     -->
+    <!-- Завдання 1.3. Чи є різниця в поведінці цих двох варіантів і чому?
+    Немає різниці в даному випадку. Тільки спрощує сам код. Але виконується однаково в обох випадках.
+     -->
+
+    <!-- Завдання 2. Наступна функція повертає true, якщо параметр age перевищує 18. В іншому випадку запитує підтвердження та повертає результат.
+    function checkAge(age) {
+        if (age > 18) {
+        return true;
+        } else {
+        return confirm('Did parents allow you?');
+        }
+    } 
+    2.1. Перепишіть функцію checkAge, використовуючи '?'
+    function checkAge(age) {
+        return (age > 18) ? true : confirm('Did parents allow you?');
+    } 
+
+    2.2. Перепишіть функцію checkAge, використовуючи '||'
+    function checkAge(age) {
+        return (age > 18) || confirm('Did parents allow you?');
+    }
+    -->
+
+    <!-- Завдання 3. Чи потрібні дужки навколо age > 18
+    return (age > 18) || confirm('Did parents allow you?');
+
+    Дужки в даному випадку не обов'язкові, адже '>' має більший пріорітет порівняння, а тому виконається першим.
+    -->
+
+    <!-- Завдання 4. Напишіть функцію min(a,b), яка повертає найменше з двох чисел a і b. У випадку рівності a == b немає значення, що повертати. Наприклад:
+    4.1. реалізуйте функцію min, використовуючи оператор if else
+    function min(a, b) {
+        if (a < b) {
+        return a;
+        } else {
+        return b;
+        }
+    }
+    console.log(min(2, 5));  // 2
+    console.log(min(3, -1)); // -1
+    console.log(min(1, 1));  // 1
+
+    4.2. реалізуйте функцію min, використовуючи тернарний оператор
+    function min(a, b) {
+        return a < b ? a : b;
+    }
+    console.log(min(2, 5));  // 2
+    console.log(min(3, -1)); // -1
+    console.log(min(1, 1));  // 1
+    -->
+
+    <!-- Завдання 5. Напишіть функцію pow(x,n), яка повертає x у ступені n. Або, іншими словами, множить x на себе n разів і повертає результат. У цьому завданні функція повинна підтримувати лише натуральні значення n: цілі числа від 1. -->
+    <script>
+    function pow(x, n) {
+        let xInt = parseInt(x);
+        let nInt = parseInt(n);
+
+        if (isNaN(xInt)) {
+            alert("x не є числом");
+            return NaN;
+        }
+        if (isNaN(nInt) || nInt < 1 || !Number.isInteger(nInt)) {
+            alert("n не є натуральним числом");
+            return NaN;
+        }
+
+        return xInt ** nInt;
+    }
+
+        let result;
+        do {
+        const x = prompt("Введіть x: ");
+        const n = prompt("Введіть натуральне число n (n>=1): ");
+        result = pow(x, n);
+        } while (isNaN(result));
+
+        alert(result);
+    </script>
+
+    <!-- Завдання 6. Викликати функцію ask, використовуючи функцію стрілок:
+    let ask = (question, yes, no) => {
+        if (confirm(question)) yes();
+        else no();
+    }
+    Завдання 7. Викликати функцію ask, використовуючи функціональний вираз:
+    let ask = function (question, yes, no) {
+        if (confirm(question)) {
+        yes();
+        } else {
+        no();
+        }
+    };
+    -->
+
+    <!-- Завдання 8. Маємо 3 функції.
+    function A() { console.log('A was called'); return undefined;}
+    function B() { console.log('B was called'); return false;}
+    function C() { console.log('C was called'); return "foo";}
+
+    8.1. Яким чином виконати виклик функцій A() і C(), щоб на консолі отримати такий результат A was called C was called foo
+    A();
+    console.log(C());
+
+    8.2 Яким чином виконати виклик функцій B() і C(), щоб на консолі отримати такий результат B was called C was called foo
+    B();
+    console.log(C());
+    -->
+
+</body>
+</html>
