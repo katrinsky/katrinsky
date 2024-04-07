@@ -13,7 +13,7 @@
 
 class AuthException extends Error {
   constructor(code, message) {
-    super(); // Викликаємо конструктор батьківського класу Error
+    super(message); // Викликаємо конструктор батьківського класу Error
     this.code = code;
     // Встановлюємо властивість message, яка дорівнює 'code: message', або просто 'code', якщо message не задано
     this.message = message ? `${code}: ${message}` : `${code}`;
